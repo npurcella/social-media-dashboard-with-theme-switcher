@@ -1,0 +1,306 @@
+:root {
+    background: $bodyBg;
+    color: $lightText;
+    font-family: $defaultFontStyle;
+    font-weight: $defaultFontWeight;
+    font-size: $defaultFontSize;
+}
+.container {
+    width: 95%;
+    margin: 2rem auto;
+    background: $bg;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkgray;
+}
+.header {
+    background: $cardBg;
+    padding: 2rem $gutter 0 $gutter;
+    //     padding-left: $gutter;
+    margin-bottom: -2.5rem;
+    border-radius: 0 0 5% 5%;
+}
+.header-text {
+    position: relative;
+    h1 {
+        font-size: 1.5rem;
+        color: $darkText;
+        margin-bottom: 0.25rem;
+    }
+    p {
+        font-weight: $fontWeightBold;
+        font-size: 0.875rem;
+        margin-bottom: 3rem;
+        word-spacing: 0.05rem;
+    }
+    p::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 5rem;
+        left: 0;
+        background-color: $lightText;
+    }
+}
+.header-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.5rem;
+    .theme-text {
+        font-size: 0.875rem;
+        font-weight: $fontWeightBold;
+    }
+    .theme-selector {
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 3rem;
+            height: 1.5rem;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .switch .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $toggle;
+            transition: 0.4s;
+        }
+        .switch .slider::before {
+            position: absolute;
+            content: "";
+            height: 1.25rem;
+            width: 1.25rem;
+            left: 0.125rem;
+            bottom: 0.125rem;
+            background-color: $cardBg;
+            transition: 0.4s;
+        }
+        input:checked + .slider {
+        }
+        input:focus + .slider {
+            box-shadow: 0 0 1px $toggle;
+        }
+        input:checked + .slider::before {
+            transform: translateX(1.5rem);
+        }
+        .slider.round {
+            border-radius: 1rem;
+        }
+        .slider.round::before {
+            border-radius: 50%;
+        }
+    }
+    .theme-selector:hover {
+        .slider.round {
+            background: $toggleDark;
+        }
+        .slider.round::before {
+            border: 1px solid $limeGreen;
+            box-shadow: 0 0 11px $limeGreen;
+        }
+    }
+}
+.img {
+    background-image: url(../images/icon-down.svg);
+    background-repeat: no-repeat;
+    color: lime;
+    height: 200px;
+    width: 200px;
+}
+
+.follower-card {
+    margin: 0 $gutter 1rem;
+    padding: 2.5rem 3rem 1.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: $cardBg;
+    .follower-info {
+        margin-bottom: 1rem;
+        position: relative;
+        // Doing this let me position the image properly from the name for each source
+        display: inline-block;
+        .follower-source {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 1.25rem;
+            height: 1.25rem;
+            right: calc(100% + 0.5rem);
+            top: -0.2rem;
+        }
+        .follower-name {
+            font-size: 0.75rem;
+            font-weight: $fontWeightBold;
+        }
+    }
+    .follower-count {
+        font-weight: $fontWeightBold;
+        font-size: 3.8rem;
+        color: $darkText;
+    }
+    .follower-label {
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        margin-bottom: 2rem;
+    }
+    .follower-change {
+        font-size: 0.75rem;
+        font-weight: $fontWeightBold;
+        position: relative;
+        display: inline-block;
+    }
+    .follower-change::before {
+        position: absolute;
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        // This let me put the arrow at a consistent distance from the number
+        right: calc(100% + 0.0025rem);
+        bottom: -0.4rem;
+        background-repeat: no-repeat;
+    }
+    .follower-change.up {
+        color: $limeGreen;
+    }
+
+    .follower-change.up::before {
+        background-image: url(../images/icon-up.svg);
+    }
+    .follower-change.down {
+        color: $brightRed;
+    }
+    .follower-change.down::before {
+        background-image: url(../images/icon-down.svg);
+    }
+}
+.follower-card:last-of-type {
+    margin-bottom: 2.5rem;
+}
+.follower-card.facebook {
+    border-top: 3px solid $facebook;
+    .follower-source {
+        background-image: url(../images/icon-facebook.svg);
+    }
+}
+.follower-card.twitter {
+    border-top: 3px solid $twitter;
+    .follower-source {
+        background-image: url(../images/icon-twitter.svg);
+    }
+}
+
+// Could not figure out the rounded corners at this time :(
+.instagram-border {
+    width: 90%;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to right, yellow, hotpink);
+    border-image-slice: 0.5 1 0.5;
+}
+.follower-card.instagram {
+    .follower-source {
+        background-image: url(../images/icon-instagram.svg);
+    }
+}
+.follower-card.youtube {
+    border-top: 3px solid $youtube;
+    .follower-source {
+        background-image: url(../images/icon-youtube.svg);
+    }
+}
+.overview {
+    padding-bottom: 2rem;
+}
+.overview-title {
+    font-size: 1.5rem;
+    margin: 0 $gutter 1.5rem;
+}
+.overview-card {
+    margin: 0 $gutter 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: $cardBg;
+    .overview-top {
+        display: flex;
+        justify-items: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 1.75rem;
+        .overview-count-hdr {
+            font-size: 0.85rem;
+            font-weight: $fontWeightBold;
+        }
+        .overview-source {
+            position: absolute;
+            content: "";
+            background-image: url(../images/icon-facebook.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 1.15rem;
+            width: 1.15rem;
+            top: 0;
+            right: 0;
+        }
+    }
+    .overview-stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .overview-count {
+            color: $darkText;
+            font-size: 2rem;
+            font-weight: $fontWeightBold;
+        }
+        .overview-change {
+            position: relative;
+            font-size: 0.75rem;
+            font-weight: $fontWeightBold;
+            display: inline-block;
+        }
+        .overview-change.up {
+            color: $limeGreen;
+        }
+        .overview-change.down {
+            color: $brightRed;
+        }
+        .overview-change::before {
+            position: absolute;
+            content: "";
+            background-image: url(../images/icon-up.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 0.25rem;
+            width: 0.5rem;
+            left: -0.75rem;
+            bottom: 0.3rem;
+        }
+        .overview-change.up::before {
+            background-image: url(../images/icon-up.svg);
+        }
+        .overview-change.down::before {
+            background-image: url(../images/icon-down.svg);
+        }
+    }
+}
+.overview-card:last-of-type {
+    margin-bottom: 2rem;
+}
+.attribution {
+    font-family: var(--global-attribute-font-family);
+    color: var(--global-attribute-font-color);
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+// use this link example to change colors: https://jsfiddle.net/sm7a2qv8/

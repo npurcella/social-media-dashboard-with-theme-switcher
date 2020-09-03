@@ -1,0 +1,37 @@
+// Font specs
+$defaultFontWeight: 400;
+$fontWeightBold: 700;
+$defaultFontStyle: "Inter", sans-serif;
+$defaultFontSize: 15px;
+
+// Colors
+$limeGreen: hsl(163, 72%, 41%);
+$brightRed: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$instagram: linear-gradient(to right, yellow, hotpink);
+$youtube: hsl(348, 97%, 39%);
+
+// Light theme (default)
+$bodyBg: #efefef;
+$toggle: hsl(230, 22%, 74%);
+$bg: hsl(0, 0%, 100%);
+$forPattern: hsl(225, 100%, 98%);
+$cardBg: hsl(227, 47%, 96%);
+$darkText: hsl(230, 17%, 14%);
+$lightText: hsl(228, 12%, 44%);
+
+// Dark theme
+$bodyBgDark: #000;
+// $toggleDark: linear-gradient(left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$toggleDark: linear-gradient(to right, #378fe6, #3eda82);
+$bgDark: hsl(230, 17%, 14%);
+$forPatternDark: hsl(232, 19%, 15%);
+$cardBgDark: hsl(228, 28%, 20%);
+$darkTextDark: hsl(228, 34%, 66%);
+$lightTextDark: hsl(0, 0%, 100%);
+
+// Structure
+$gutter: 5%;
