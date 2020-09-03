@@ -183,8 +183,50 @@ img {
   border: 1px solid darkgray;
 }
 
+.container.dark {
+  background: #1e202a;
+}
+
+.container.dark .header {
+  background: #1f212e;
+}
+
+.container.dark .header-text,
+.container.dark .theme-text {
+  color: #8b97c6;
+}
+
+.container.dark .header-text p::after {
+  background-color: #8b97c6;
+}
+
+.container.dark .header-text h1,
+.container.dark .overview-title {
+  color: white;
+}
+
+.container.dark .card {
+  background-color: #252a41;
+}
+
+.container.dark .card .follower-count,
+.container.dark .card .overview-stats .overview-count {
+  color: white;
+}
+
+.container.dark .card .follower-name,
+.container.dark .card .follower-label,
+.container.dark .card .overview-title,
+.container.dark .card .overview-count-hdr {
+  color: #8b97c6;
+}
+
+.container.dark .theme-selector .switch .slider::before {
+  background-color: #252a41;
+}
+
 .header {
-  background: #f0f2fa;
+  background: #f5f7ff;
   padding: 2rem 5% 0 5%;
   margin-bottom: -2.5rem;
   border-radius: 0 0 5% 5%;
@@ -280,11 +322,13 @@ img {
   border-radius: 50%;
 }
 
-.header-theme .theme-selector:hover .slider.round {
+.header-theme .theme-selector:hover .slider.round,
+.header-theme .theme-selector:focus .slider.round {
   background: linear-gradient(to right, #378fe6, #3eda82);
 }
 
-.header-theme .theme-selector:hover .slider.round::before {
+.header-theme .theme-selector:hover .slider.round::before,
+.header-theme .theme-selector:focus .slider.round::before {
   border: 1px solid #1db489;
   box-shadow: 0 0 11px #1db489;
 }

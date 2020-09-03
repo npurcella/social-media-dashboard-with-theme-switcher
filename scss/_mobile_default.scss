@@ -13,8 +13,45 @@
     flex-direction: column;
     border: 1px solid darkgray;
 }
+.container.dark {
+    background: $bgDark;
+    .header {
+        background: $forPatternDark;
+    }
+    .header-text,
+    .theme-text {
+        color: $darkTextDark;
+    }
+    .header-text {
+        p::after {
+            background-color: $darkTextDark;
+        }
+    }
+    .header-text h1,
+    .overview-title {
+        color: $lightTextDark;
+    }
+    .card {
+        background-color: $cardBgDark;
+        .follower-count,
+        .overview-stats .overview-count {
+            color: $lightTextDark;
+        }
+        .follower-name,
+        .follower-label,
+        .overview-title,
+        .overview-count-hdr {
+            color: $darkTextDark;
+        }
+    }
+    .theme-selector {
+        .switch .slider::before {
+            background-color: $cardBgDark;
+        }
+    }
+}
 .header {
-    background: $cardBg;
+    background: $forPattern;
     padding: 2rem $gutter 0 $gutter;
     //     padding-left: $gutter;
     margin-bottom: -2.5rem;
@@ -99,7 +136,8 @@
             border-radius: 50%;
         }
     }
-    .theme-selector:hover {
+    .theme-selector:hover,
+    .theme-selector:focus {
         .slider.round {
             background: $toggleDark;
         }
@@ -116,7 +154,6 @@
     height: 200px;
     width: 200px;
 }
-
 .follower-card {
     margin: 0 $gutter 1rem;
     padding: 2.5rem 3rem 1.75rem;

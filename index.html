@@ -21,7 +21,7 @@
         <title>Frontend Mentor | [Challenge Name Here]</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="container">
             <header class="header">
                 <div class="header-text">
                     <h1>Social Media Dashboard</h1>
@@ -31,14 +31,18 @@
                     <p class="theme-text">Dark Mode</p>
                     <div class="theme-selector">
                         <label class="switch">
-                            <input type="checkbox" checked />
+                            <input
+                                type="checkbox"
+                                name="theme-changer"
+                                checked
+                            />
                             <span class="slider round"></span>
                         </label>
                     </div>
                 </div>
             </header>
             <main class="followers">
-                <div class="follower-card facebook">
+                <div class="follower-card card facebook">
                     <div class="follower-info">
                         <div class="follower-source"></div>
                         <div class="follower-name">@nathanf</div>
@@ -47,7 +51,7 @@
                     <div class="follower-label">Followers</div>
                     <div class="follower-change up">12 Today</div>
                 </div>
-                <div class="follower-card twitter">
+                <div class="follower-card card twitter">
                     <div class="follower-info">
                         <div class="follower-source"></div>
                         <div class="follower-name">@nathanf</div>
@@ -56,7 +60,7 @@
                     <div class="follower-label">Followers</div>
                     <div class="follower-change up">99 Today</div>
                 </div>
-                <div class="follower-card instagram instagram-border">
+                <div class="follower-card card instagram instagram-border">
                     <div class="follower-info">
                         <div class="follower-source"></div>
                         <div class="follower-name">@realnathanf</div>
@@ -65,7 +69,7 @@
                     <div class="follower-label">Followers</div>
                     <div class="follower-change up">1099 Today</div>
                 </div>
-                <div class="follower-card youtube">
+                <div class="follower-card card youtube">
                     <div class="follower-info">
                         <div class="follower-source"></div>
                         <div class="follower-name">Nathan F.</div>
@@ -77,7 +81,7 @@
             </main>
             <section class="overview">
                 <h3 class="overview-title">Overview - Today</h3>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Page Views</div>
                         <div class="overview-source"></div>
@@ -87,7 +91,7 @@
                         <div class="overview-change up">3%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Likes</div>
                         <div class="overview-source"></div>
@@ -97,7 +101,7 @@
                         <div class="overview-change down">2%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Likes</div>
                         <div class="overview-source"></div>
@@ -107,7 +111,7 @@
                         <div class="overview-change up">2257%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Profile Views</div>
                         <div class="overview-source"></div>
@@ -117,7 +121,7 @@
                         <div class="overview-change up">1375%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Retweets</div>
                         <div class="overview-source"></div>
@@ -127,7 +131,7 @@
                         <div class="overview-change up">303%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Likes</div>
                         <div class="overview-source"></div>
@@ -137,7 +141,7 @@
                         <div class="overview-change up">553%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Likes</div>
                         <div class="overview-source"></div>
@@ -147,7 +151,7 @@
                         <div class="overview-change down">19%</div>
                     </div>
                 </div>
-                <div class="overview-card">
+                <div class="overview-card card">
                     <div class="overview-top">
                         <div class="overview-count-hdr">Total Views</div>
                         <div class="overview-source"></div>
@@ -168,5 +172,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Nancy Purcell</a>.
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
