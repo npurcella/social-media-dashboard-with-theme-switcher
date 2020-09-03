@@ -53,7 +53,6 @@
 .header {
     background: $forPattern;
     padding: 2rem $gutter 0 $gutter;
-    //     padding-left: $gutter;
     margin-bottom: -2.5rem;
     border-radius: 0 0 5% 5%;
 }
@@ -154,12 +153,37 @@
     height: 200px;
     width: 200px;
 }
-.follower-card {
+.card {
     margin: 0 $gutter 1rem;
-    padding: 2.5rem 3rem 1.75rem;
     border-radius: 0.5rem;
-    text-align: center;
     background-color: $cardBg;
+    .stats-change {
+        font-size: 0.75rem;
+        font-weight: $fontWeightBold;
+        position: relative;
+        display: inline-block;
+    }
+    .stats-change.up {
+        color: $limeGreen;
+    }
+    .stats-change.down {
+        color: $brightRed;
+    }
+    .stats-change.up::before,
+    .stats-change.down::before {
+        position: absolute;
+        content: "";
+    }
+    .stats-change.up::before {
+        background-image: url(../images/icon-up.svg);
+    }
+    .stats-change.down::before {
+        background-image: url(../images/icon-down.svg);
+    }
+}
+.follower-card {
+    padding: 2.5rem 3rem 1.75rem;
+    text-align: center;
     .follower-info {
         margin-bottom: 1rem;
         position: relative;
@@ -189,34 +213,13 @@
         letter-spacing: 0.25rem;
         margin-bottom: 2rem;
     }
-    .follower-change {
-        font-size: 0.75rem;
-        font-weight: $fontWeightBold;
-        position: relative;
-        display: inline-block;
-    }
     .follower-change::before {
-        position: absolute;
-        content: "";
         height: 1rem;
         width: 1rem;
         // This let me put the arrow at a consistent distance from the number
         right: calc(100% + 0.0025rem);
         bottom: -0.4rem;
         background-repeat: no-repeat;
-    }
-    .follower-change.up {
-        color: $limeGreen;
-    }
-
-    .follower-change.up::before {
-        background-image: url(../images/icon-up.svg);
-    }
-    .follower-change.down {
-        color: $brightRed;
-    }
-    .follower-change.down::before {
-        background-image: url(../images/icon-down.svg);
     }
 }
 .follower-card:last-of-type {
@@ -278,7 +281,6 @@
         .overview-source {
             position: absolute;
             content: "";
-            background-image: url(../images/icon-facebook.svg);
             background-repeat: no-repeat;
             background-size: cover;
             height: 1.15rem;
@@ -296,39 +298,36 @@
             font-size: 2rem;
             font-weight: $fontWeightBold;
         }
-        .overview-change {
-            position: relative;
-            font-size: 0.75rem;
-            font-weight: $fontWeightBold;
-            display: inline-block;
-        }
-        .overview-change.up {
-            color: $limeGreen;
-        }
-        .overview-change.down {
-            color: $brightRed;
-        }
         .overview-change::before {
-            position: absolute;
-            content: "";
-            background-image: url(../images/icon-up.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
             height: 0.25rem;
             width: 0.5rem;
             left: -0.75rem;
             bottom: 0.3rem;
         }
-        .overview-change.up::before {
-            background-image: url(../images/icon-up.svg);
-        }
-        .overview-change.down::before {
-            background-image: url(../images/icon-down.svg);
-        }
     }
 }
 .overview-card:last-of-type {
     margin-bottom: 2rem;
+}
+.overview-card.facebook {
+    .overview-source {
+        background-image: url(../images/icon-facebook.svg);
+    }
+}
+.overview-card.twitter {
+    .overview-source {
+        background-image: url(../images/icon-twitter.svg);
+    }
+}
+.overview-card.instagram {
+    .overview-source {
+        background-image: url(../images/icon-instagram.svg);
+    }
+}
+.overview-card.youtube {
+    .overview-source {
+        background-image: url(../images/icon-youtube.svg);
+    }
 }
 .attribution {
     font-family: var(--global-attribute-font-family);
