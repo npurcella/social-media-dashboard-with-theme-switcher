@@ -233,6 +233,7 @@ img {
 }
 
 .header-text {
+  width: 100%;
   position: relative;
 }
 
@@ -549,5 +550,65 @@ img {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (min-width: 900px) {
+  .header {
+    margin-bottom: -7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  .header .header-text h1 {
+    font-size: 2rem;
+  }
+  .header .header-text p {
+    font-size: 1rem;
+  }
+  .header .header-text p::after {
+    height: 0;
+    width: 0;
+  }
+  .header .theme-text {
+    margin-right: 1rem;
+  }
+  .header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .followers {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 85%;
+  }
+  .followers .follower-card {
+    margin: 0 1rem 2rem;
+    min-width: 17rem;
+  }
+  .followers .instagram-border {
+    width: inherit;
+    max-width: 17rem;
+  }
+  .overview {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .overview .overview-title {
+    margin: 0 0 1.5rem;
+    padding-left: 1.9rem;
+  }
+  .overview .overview-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .overview .overview-cards .overview-card {
+    margin: 0 1rem 1rem;
+    min-width: 17rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

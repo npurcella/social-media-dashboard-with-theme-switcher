@@ -23,21 +23,23 @@
     <body>
         <div class="container" id="container">
             <header class="header">
-                <div class="header-text">
-                    <h1>Social Media Dashboard</h1>
-                    <p>Total Followers: 23,004</p>
-                </div>
-                <div class="header-theme">
-                    <p class="theme-text">Dark Mode</p>
-                    <div class="theme-selector">
-                        <label class="switch">
-                            <input
-                                type="checkbox"
-                                name="theme-changer"
-                                checked
-                            />
-                            <span class="slider round"></span>
-                        </label>
+                <div class="header-container">
+                    <div class="header-text">
+                        <h1>Social Media Dashboard</h1>
+                        <p>Total Followers: 23,004</p>
+                    </div>
+                    <div class="header-theme">
+                        <p class="theme-text">Dark Mode</p>
+                        <div class="theme-selector">
+                            <label class="switch">
+                                <input
+                                    type="checkbox"
+                                    name="theme-changer"
+                                    checked
+                                />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -85,84 +87,102 @@
             </main>
             <section class="overview">
                 <h3 class="overview-title">Overview - Today</h3>
-                <div class="overview-card card facebook">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Page Views</div>
-                        <div class="overview-source"></div>
+                <div class="overview-cards">
+                    <div class="overview-card card facebook">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Page Views</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">87</div>
+                            <div class="overview-change stats-change up">
+                                3%
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">87</div>
-                        <div class="overview-change stats-change up">3%</div>
+                    <div class="overview-card card facebook">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Likes</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">52</div>
+                            <div class="overview-change stats-change down">
+                                2%
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="overview-card card facebook">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Likes</div>
-                        <div class="overview-source"></div>
+                    <div class="overview-card card instagram">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Likes</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">5462</div>
+                            <div class="overview-change stats-change up">
+                                2257%
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">52</div>
-                        <div class="overview-change stats-change down">2%</div>
+                    <div class="overview-card card instagram">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Profile Views</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">52k</div>
+                            <div class="overview-change stats-change up">
+                                1375%
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="overview-card card instagram">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Likes</div>
-                        <div class="overview-source"></div>
+                    <div class="overview-card card twitter">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Retweets</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">117</div>
+                            <div class="overview-change stats-change up">
+                                303%
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">5462</div>
-                        <div class="overview-change stats-change up">2257%</div>
+                    <div class="overview-card card twitter">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Likes</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">507</div>
+                            <div class="overview-change stats-change up">
+                                553%
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="overview-card card instagram">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Profile Views</div>
-                        <div class="overview-source"></div>
+                    <div class="overview-card card youtube">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Likes</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">107</div>
+                            <div class="overview-change stats-change down">
+                                19%
+                            </div>
+                        </div>
                     </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">52k</div>
-                        <div class="overview-change stats-change up">1375%</div>
-                    </div>
-                </div>
-                <div class="overview-card card twitter">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Retweets</div>
-                        <div class="overview-source"></div>
-                    </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">117</div>
-                        <div class="overview-change stats-change up">303%</div>
-                    </div>
-                </div>
-                <div class="overview-card card twitter">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Likes</div>
-                        <div class="overview-source"></div>
-                    </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">507</div>
-                        <div class="overview-change stats-change up">553%</div>
-                    </div>
-                </div>
-                <div class="overview-card card youtube">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Likes</div>
-                        <div class="overview-source"></div>
-                    </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">107</div>
-                        <div class="overview-change stats-change down">19%</div>
-                    </div>
-                </div>
-                <div class="overview-card card youtube">
-                    <div class="overview-top">
-                        <div class="overview-count-hdr">Total Views</div>
-                        <div class="overview-source"></div>
-                    </div>
-                    <div class="overview-stats">
-                        <div class="overview-count">1407</div>
-                        <div class="overview-change stats-change down">12%</div>
+                    <div class="overview-card card youtube">
+                        <div class="overview-top">
+                            <div class="overview-count-hdr">Total Views</div>
+                            <div class="overview-source"></div>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="overview-count">1407</div>
+                            <div class="overview-change stats-change down">
+                                12%
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
