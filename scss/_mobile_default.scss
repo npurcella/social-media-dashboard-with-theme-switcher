@@ -3,7 +3,6 @@
     color: $lightText;
     font-family: $defaultFontStyle;
     font-weight: $defaultFontWeight;
-    font-size: $defaultFontSize;
 }
 .container {
     width: 95%;
@@ -121,8 +120,6 @@
             background-color: $cardBg;
             transition: 0.4s;
         }
-        input:checked + .slider {
-        }
         input:focus + .slider {
             box-shadow: 0 0 1px $toggle;
         }
@@ -143,7 +140,7 @@
         }
         .slider.round::before {
             border: 1px solid $limeGreen;
-            box-shadow: 0 0 11px $limeGreen;
+            box-shadow: 0 0 20px $limeGreen;
         }
     }
 }

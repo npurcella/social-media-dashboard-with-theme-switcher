@@ -171,7 +171,6 @@ img {
   color: #63687e;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 15px;
 }
 
 .container {
@@ -331,7 +330,7 @@ img {
 .header-theme .theme-selector:hover .slider.round::before,
 .header-theme .theme-selector:focus .slider.round::before {
   border: 1px solid #1db489;
-  box-shadow: 0 0 11px #1db489;
+  box-shadow: 0 0 20px #1db489;
 }
 
 .img {
